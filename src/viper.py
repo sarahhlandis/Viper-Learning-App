@@ -13,7 +13,7 @@ print('''\n Welcome to Viper, your personalized language learning app. Please se
         Press 3 for Quiz Mode 
         Press E to Exit at any time \n''')
 
-# put this in some sort of while loop
+# Menu Options
 option = input("What would you like to do? \n")
 while option!="E":
         if option == "1":
