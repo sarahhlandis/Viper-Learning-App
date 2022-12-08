@@ -1,18 +1,18 @@
 # Translator and Language Learning Terminal Application
 
-## Sources Used:
+### Sources Used:
 - 
 - 
 - 
 
-## gitHub Repository:
+### gitHub Repository:
+Check out my gitHub repository here: [Github repo](https://github.com/sarahhlandis/Terminal_Application)
 
-
-## Style Guide:
+### Style Guide:
 This terminal application was made in accordance with the PEP8 styleguide.
 It features 
 
-## Application Features
+### Application Features
 1. Use of various user input throughout the program
 - The app will require user input at various point throughout the app both in terms of navigating thru the application as well as responding to application prompts. 
 - Upon opening the application, the user will be required to input which mode they wish to enter: Translation or Learning mode.
@@ -32,15 +32,22 @@ It features
 - Upon finishing the quiz, the application will output their score in percentage(%) of correcly answered words.
 
 
-## Implementation Plan
-- Feature 1: 
-- Feature 2:
-- Feature 3: 
+### Implementation Plan
+- Feature 1: I plan to prioritize the user input functionality first and foremost, as this is integral to the application running smoothly. Feature 1 will also include the basic translation option as well which will be on the surface level of the application.
+- Feature 2: I plan to focus on the learning mode once the main "interface" is complete. The learning section will also house Feature 3 (Quiz mode).
+- Feature 3: I will tackle this section last sort of as a bonus section. 
 
-### Poject Management
-- I chose to use Trello to manage this project. 
 
-## Help Documentation and Installation Guide
+![Feature1](./docs/f1.png)
+![Feature2](./docs/f2.png)
+![Feature3](./docs/f3.png)
+
+#### Poject Management
+- I chose to use Trello to manage this project. Please see below images of the implementation plan I intend to follow in terms of building out the features of the application.
+
+![ImplementationPlan](./docs/implementation_plan.png)
+
+### Help Documentation and Installation Guide
 1. Set Up Instructions
 2. Required Dependencies
 3. System Requirements
