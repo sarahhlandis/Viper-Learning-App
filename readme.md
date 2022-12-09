@@ -1,7 +1,7 @@
 # Translator and Language Learning Terminal Application
 
 ### Sources Used:
-- 
+- CSV doc populated via https://copylists.com/french/list-basic-french-words/#google_vignette
 - 
 - 
 

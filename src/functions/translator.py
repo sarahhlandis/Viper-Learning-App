@@ -11,6 +11,10 @@ language_list=list(languages.values())
 
 # Function for translator
 def translator():
+    #Translate mode entry message
+    print('''You're now in Viper Translate Mode. Please follow the below
+        prompts to translate - \n''')
+
     # Get user input for original language
     original_lang=input("Origin language: ").lower()
     for key, value in languages.items():
@@ -30,5 +34,3 @@ def translator():
     # Translates user text
     translation=words.translate(from_lang=original_key,to=desired_key)
     print (translation)
-    print("\n")
-
