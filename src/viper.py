@@ -1,13 +1,12 @@
-import googletrans
-import textblob
-import random
-import os 
+# import googletrans
+# import textblob
+# import random
+# import os 
 from time import sleep
 from sys import exit
 
 from functions.translator import translator
-from functions.translator_menu import translator_menu, translator
-from functions.learning import english
+from functions.translator_menu import translator_menu
 
 # Opening Greeting with Menu Options
 print('''\n Welcome to Viper, your personalized language learning app. Please select which 
@@ -26,12 +25,13 @@ while option!="\exit":
                 translator_menu()
         if option == "2":
                 print("\n")
-                english()
+                from functions import learning_mod
+                learning_mod
         if option == "3":
                 pass
-        elif option=="\exit":
-                print ("Thanks for learning. Come back soon to pick up where you left off!\n")
-                exit()
+if option=="\exit":
+        print ("\n Thanks for learning. Come back soon to pick up where you left off!\n")
+        exit()
 
 # code in try/except block for invalid entries.. 
 # review while loop

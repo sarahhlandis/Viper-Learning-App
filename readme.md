@@ -47,6 +47,10 @@ It features
 
 ![ImplementationPlan](./docs/implementation_plan.png)
 
+Progress as of Sat Dec 10
+    ![ImplementationPlan-Update](./docs/implementation_update1.png.png)
+
+
 ### Help Documentation and Installation Guide
 1. Set Up Instructions
 2. Required Dependencies
