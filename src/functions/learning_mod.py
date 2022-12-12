@@ -7,10 +7,6 @@ from pathlib import Path
 
 
 def learning_mode(file_to_open, language_to_practice):
-    # Here we pass in the file to be interacted with as a parameter.
-    # So we just need to make sure we pass something in when english is called later on at the menu step.
-
-    # take in the selected language as a parameter
 
     with open(file_to_open) as readFile:
         open_file = csv.reader(readFile)
