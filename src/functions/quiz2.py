@@ -3,11 +3,12 @@ from time import *
 import csv
 import threading
 from pathlib import Path
-# from functions.terminal import clear_terminal
-from terminal import clear_terminal
+from functions.terminal import clear_terminal
+from functions.quiz_menu import quiz_menu
+
+# def quiz():
 
 def quiz_mode(file_to_open):
-
     with open(file_to_open) as readFile:
         open_file = csv.reader(readFile)
         vocabulary = list(open_file)    # convert file to list of lists (per row)
@@ -46,12 +47,13 @@ def quiz_word(vocabulary):
                 f"Correct!\n"
             )
             score+=1
+            # correct.append(quiz_word)
         elif user_entry != (vocabulary[random_index][guessword]).lower():
             print(
                 f"Incorrect!\n"
             )
             score-=1
-
+            # incorrect.append(quiz_word)
 
 
 # def countdown():
@@ -64,6 +66,7 @@ def quiz_word(vocabulary):
 #         quiz_timer -= 1
 #     print ("Ding Ding!! Time's up!!")
 
+
 def countdown():
     global quiz_timer
     while quiz_timer:
@@ -73,7 +76,7 @@ def countdown():
         sleep(1)
         quiz_timer -= 1
         if quiz_timer==0:
-            print("Time's up!")
+            print("Ding Ding!! Time's up!!")
 
 countdown_thread=threading.Thread(target=countdown)
 
@@ -91,7 +94,7 @@ filename = input("Please enter the filename you wish to study: \n").lower()
 filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
 
 quiz_timer=int(input("\nHow much time would you like on the clock(in seconds)? \n"))
-  
+
 ready=input("\nAre you ready to begin? \n")
 
 # determine user input to run correct func
@@ -102,15 +105,16 @@ if ready.lower() == "yes":
     countdown()
     print("\n")
     quiz_word()
+    quiz_menu()
 else: print("Please xxxxx")
 
 
 
 # To resolve
 # Goal - timer running in background but displaying simultaneously
-# need to thread timer and connect it to the quiz func
 # list setup for correct/incorrect - unaccessed?
-# while loop relative to timer not activating
 # testing
 # Error Handling
+# quiz menu not printing at end of quiz
+
 

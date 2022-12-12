@@ -2,6 +2,7 @@
 
 import googletrans
 import textblob
+from functions.translator_menu import translator_menu
 
 # Get languages from googletrans pkg dictionary
 languages=googletrans.LANGUAGES
@@ -34,3 +35,4 @@ def translator():
     # Translates user text
     translation=words.translate(from_lang=original_key,to=desired_key)
     print (translation)
+    translator_menu()

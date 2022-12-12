@@ -5,10 +5,11 @@
 from time import sleep
 from sys import exit
 
-from functions.translator import translator
-from functions.translator_menu import translator_menu
+from functions.terminal import clear_terminal
+
 
 # Opening Greeting with Menu Options
+clear_terminal()
 print('''\nWelcome to Viper, your personalized language learning app. Please select which 
         mode you'd like to enter from the options below. 
         Press 1 for Translator Mode 
@@ -20,19 +21,20 @@ print('''\nWelcome to Viper, your personalized language learning app. Please sel
 option = input("\nWhat would you like to do? \n")
 while option!="\exit":
         if option == "1":
-                print("\n")
+                clear_terminal()
+                from functions.translator import translator
                 translator()
-                translator_menu()
         if option == "2":
-                print("\n")
-                from functions import learning_mod
-                learning_mod
+                clear_terminal()
+                from functions.learning_mod import learning
+                learning()
         if option == "3":
-                from functions import quiz2
-                quiz2
+                clear_terminal()
+                from functions.quiz2 import quiz
+                quiz()
 if option=="\exit":
         print ("\n Thanks for learning. Come back soon to pick up where you left off! \n")
-        exit()
+        exit(0)
 
 # code in try/except block for invalid entries.. 
 # review while loop
