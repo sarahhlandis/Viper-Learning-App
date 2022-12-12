@@ -13,8 +13,12 @@ def learning_mode(file_to_open, language_to_practice):
         vocabulary = list(open_file)    # convert file to list of lists (per row)
         word_check(vocabulary, language_to_practice)    # pass list and lang to func
 
+# Initialize empty list to store correct and incorrect values
+correct = []
+incorrect = []
 
 def word_check(vocabulary, language_to_practice):
+
     list_len = len(vocabulary)-1
     counter = 0
 
@@ -35,7 +39,8 @@ def word_check(vocabulary, language_to_practice):
     #vocabulary[0][0] gives english value
     # these are the header rows in the csv file
 
-    while counter < list_len:  # this loop runs past list length!
+
+    while counter < list_len:  # # # this loop runs past list length by 1! # # #
         random_word = random.randint(1,
                                      list_len)  # figure out how gen random int
         # # without repeating one that has already occurred
@@ -54,18 +59,21 @@ def word_check(vocabulary, language_to_practice):
             x-=1 # to show tries left on output of each guess (when wrong)
             if user_entry == (vocabulary[random_word][guessword]).lower():
                 print("Nice work! That's correct. \n")
-                break  # break loop if correct
+                break  # (break loop if correct)
+                # return correct.append(practice_word)    # return correct word to list
             elif user_entry != (vocabulary[random_word][guessword]).lower():
                 print(
                     f"Incorrect. You have {x} tries remaining! \n"
                 )
+                # return incorrect.append(practice_word)
         if counter==list_len:
             break
-    # from functions import learning_menu
-    # learning_menu
+    from functions.learning_menu import learning_menu
+    learning_menu()
+    
 
 # Translate mode opening greeting message
-print('''\n You're now in Viper Learning Mode. Please follow the below
+print('''\nYou're now in Viper Learning Mode. Please follow the below
 prompts to get started - \n''')
 
 # Get user input to determine which language as base study
@@ -75,9 +83,6 @@ practice_lang = input(
     If you wish to study from english translations (note: this 
     will require you to respond in foreign lang), type Foreign: \n''')
 
-# Initialize empty list to store correct and incorrect values
-correct = []
-incorrect = []
 
 
 clear_terminal() # Clear terminal before user enters file name

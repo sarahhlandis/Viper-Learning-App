@@ -1,7 +1,7 @@
 # Translator and Language Learning Terminal Application
 
 ### Sources Used:
-- CSV doc populated via https://copylists.com/french/list-basic-french-words/#google_vignette
+- CSV docs populated via https://copylists.com/french/list-basic-french-words/#google_vignette
 - 
 - 
 
@@ -17,18 +17,19 @@ It features
 - The app will require user input at various point throughout the app both in terms of navigating thru the application as well as responding to application prompts. 
 - Upon opening the application, the user will be required to input which mode they wish to enter: Translation or Learning mode.
 - Based on this choice, the application will then enter the chosen mode.
-- The translation section will simply allow the user to input their desired text, select which language they wish to translate to, and then translate appropriately.
+- The translation mode will simply allow the user to input their desired text, select which language they wish to translate to, and then translate accordingly.
 
 2. Learning Mode
-- The learning mode will allow the user to learn specific words from their relevant course learning files (CSV).
+- The learning mode will allow the user to learn specific words from their relevant course learning files (CSV file format).
+- The user will specify which language they wish to study from (i.e. if they wish to study from english words, they will have to input the french translations).
 - The user will have the opportunity to practice the words in a sort of flashcard style way, where a word will be displayed and the user will have to enter the translation. The user will be alotted 3 tries to correctly guess the word.
 - Upon exiting this mode, the application will output the user's progress, in terms of a percentage (%) of words completed (gone through). It will also display which words the user needs to work on in terms of displaying incorrectly guessed words.
 
 3. Quiz Mode
 - The Quiz mode can be accessed at any time from within the Learning mode.
 - Quiz mode offers the user the chance to practice the words they've learned with a time component.
-- The user can select how long they wish to play for in terms of time.
-- This mode will randomly generate a word that the user has encountered in learning mode, and require them to correctly translate.
+- The user can specify how long they wish to play using a built-in timer.
+- This mode will randomly generate a word from the file that the user has chosen, and require them to correctly translate.
 - Upon finishing the quiz, the application will output their score in percentage(%) of correcly answered words.
 
 

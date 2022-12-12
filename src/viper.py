@@ -9,7 +9,7 @@ from functions.translator import translator
 from functions.translator_menu import translator_menu
 
 # Opening Greeting with Menu Options
-print('''\n Welcome to Viper, your personalized language learning app. Please select which 
+print('''\nWelcome to Viper, your personalized language learning app. Please select which 
         mode you'd like to enter from the options below. 
         Press 1 for Translator Mode 
         Press 2 for Learning Mode 
@@ -17,7 +17,7 @@ print('''\n Welcome to Viper, your personalized language learning app. Please se
         Type \exit to Exit at any time \n''')
 
 # Menu Options from Start
-option = input("What would you like to do? \n")
+option = input("\nWhat would you like to do? \n")
 while option!="\exit":
         if option == "1":
                 print("\n")
@@ -28,9 +28,10 @@ while option!="\exit":
                 from functions import learning_mod
                 learning_mod
         if option == "3":
-                pass
+                from functions import quiz2
+                quiz2
 if option=="\exit":
-        print ("\n Thanks for learning. Come back soon to pick up where you left off!\n")
+        print ("\n Thanks for learning. Come back soon to pick up where you left off! \n")
         exit()
 
 # code in try/except block for invalid entries.. 

@@ -1,5 +1,5 @@
-from translator import translator
-from translator_menu import translator_menu
+# from functions.translator import translator
+# from functions.translator_menu import translator_menu
 
 # Menu once already in Learning Mode
 def learning_menu():
@@ -15,13 +15,15 @@ def learning_menu():
             print("\n Welcome Back!\n")
             from functions import learning_mod
             learning_mod
-            learning_menu()
         if option == "2":
             print("\n")
+            from functions.translator import translator
             translator()
+            from functions.translator_menu import translator_menu
             translator_menu()
         if option == "3":
-            pass
+            from functions import quiz2
+            quiz2
     elif option=="\exit":
             print ("\n Thanks for learning. Come back soon to pick up where you left off!\n")
             quit()
