@@ -3,8 +3,8 @@ from time import *
 import csv
 import threading
 from pathlib import Path
-from functions.terminal import clear_terminal
-
+# from functions.terminal import clear_terminal
+from terminal import clear_terminal
 
 def quiz_mode(file_to_open):
 
@@ -66,13 +66,14 @@ def quiz_word(vocabulary):
 
 def countdown():
     global quiz_timer
-    while quiz_timer :
+    while quiz_timer:
         mins, secs = divmod(quiz_timer, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
-        print(timer, end="\r")
+        # print(timer, end="\r")
         sleep(1)
         quiz_timer -= 1
-        print("Time's up!")
+        if quiz_timer==0:
+            print("Time's up!")
 
 countdown_thread=threading.Thread(target=countdown)
 
@@ -96,16 +97,18 @@ ready=input("\nAre you ready to begin? \n")
 # determine user input to run correct func
 if ready.lower() == "yes":
     clear_terminal() # Clear terminal before user starts quiz
-    quiz_mode(filepath)
     countdown_thread.start()
+    quiz_mode(filepath)
+    countdown()
     print("\n")
-    quiz_word
+    quiz_word()
 else: print("Please xxxxx")
 
 
 
 # To resolve
-# timer running in background but displaying simultaneously
+# Goal - timer running in background but displaying simultaneously
+# need to thread timer and connect it to the quiz func
 # list setup for correct/incorrect - unaccessed?
 # while loop relative to timer not activating
 # testing

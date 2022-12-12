@@ -27,3 +27,7 @@ def learning_menu():
     elif option=="\exit":
             print ("\n Thanks for learning. Come back soon to pick up where you left off!\n")
             quit()
+
+
+# To Fix
+# learning mod not linking - running to endless blank terminal? others working fine

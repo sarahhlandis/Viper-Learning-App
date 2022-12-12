@@ -108,8 +108,7 @@ if practice_lang.lower() == "foreign":
 
 # TBC
 # error handling
-# output percentage of correctly answered
+# output percentage of correctly answered. list accessibility/break statements?
 # random gen without repeating
 # code in keyboardInterrupt \quit option
-# learning menu not importing - importError
-# while loop running an additional unit past list len
+
