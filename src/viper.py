@@ -1,12 +1,7 @@
-# import googletrans
-# import textblob
-# import random
-# import os 
-from time import sleep
+# from time import sleep
 from sys import exit
 
 from functions.terminal import clear_terminal
-
 
 # Opening Greeting with Menu Options
 clear_terminal()
@@ -37,5 +32,5 @@ if option=="\exit":
         exit(0)
 
 # code in try/except block for invalid entries.. 
-# review while loop
+# review while loop, maybe put into main func()
 # code the raise keyboardinterrupt - \exit

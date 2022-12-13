@@ -34,5 +34,5 @@ def translator():
 
     # Translates user text
     translation=words.translate(from_lang=original_key,to=desired_key)
-    print (translation)
+    print (f"\n{translation}")
     translator_menu()

@@ -3,7 +3,7 @@ from functions.quiz2 import quiz
 
 # Menu once already in Learning Mode
 def learning_menu():
-    print('''\n Would you like to continue?
+    print('''\nWould you like to continue?
         Press 1 to Continue in Learning Mode
         Press 2 for Translator Mode 
         Press 3 for Quiz Mode

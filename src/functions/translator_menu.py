@@ -26,7 +26,3 @@ def translator_menu():
     elif option=="\exit":
             print ("Thanks for learning. Come back soon to pick up where you left off!\n")
             exit(0)
-
-
-# To Fix
-# learning mod not linking - running to endless blank terminal? others working fine

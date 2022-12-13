@@ -2,7 +2,8 @@ from functions.terminal import clear_terminal
 
 # Menu once in Quiz Mode
 def quiz_menu():
-    print('''\n Would you like to continue?
+
+    print('''\nWould you like to continue?
         Press 1 to Continue in Quiz Mode
         Press 2 for Learning Mode 
         Press 3 for Translator Mode
@@ -24,5 +25,5 @@ def quiz_menu():
             from functions.translator import translator
             translator()
     elif option=="\exit":
-            print ("Thanks for learning. Come back soon to pick up where you left off!\n")
+            print ("\nThanks for learning. Come back soon to pick up where you left off!\n")
             exit(0)

@@ -43,6 +43,11 @@ It features
 ![Feature2](./docs/f2.png)
 ![Feature3](./docs/f3.png)
 
+Changes along the way:
+![Feature1](./docs/)
+![Feature2](./docs/)
+![Feature3](.docs/)
+
 #### Poject Management
 - I chose to use Trello to manage this project. Please see below images of the implementation plan I intend to follow in terms of building out the features of the application.
 
