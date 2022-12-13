@@ -11,7 +11,6 @@ def handleUserInput(prompt_string):
 
 
 
-
 def handleUserInput_stringOnly(prompt_string):
 
   while True: # this effectively traps the user inside the while loop until they enter a string that leads to a break statement
@@ -20,7 +19,6 @@ def handleUserInput_stringOnly(prompt_string):
       print ("\nPlease enter a valid non-numeric input.\n")
     if user_input.isalpha(): # this is only True if the string is only alphabetical
       break
-
     if user_input == "\quit":
       print ("\nThanks for learning. Come back soon to pick up where you left off! \n")
       exit(0)

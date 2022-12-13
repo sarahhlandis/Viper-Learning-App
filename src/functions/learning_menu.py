@@ -1,5 +1,5 @@
 from functions.terminal import clear_terminal
-from functions.quiz2 import quiz
+from functions.quiz import quiz
 from functions.user_input import handleUserInput
 
 # Menu once already in Learning Mode

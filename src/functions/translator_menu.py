@@ -23,7 +23,7 @@ def translator_menu():
         learning()
     if option == "3":
         clear_terminal()
-        from functions.quiz2 import quiz
+        from functions.quiz import quiz
         quiz()
     # elif option=="\exit":
     #         print ("Thanks for learning. Come back soon to pick up where you left off!\n")

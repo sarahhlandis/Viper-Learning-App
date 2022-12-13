@@ -15,7 +15,7 @@ def quiz_menu():
     if option == "1":
         clear_terminal()
         print("Welcome Back!\n")
-        from functions.quiz2 import quiz
+        from functions.quiz import quiz
         quiz()
     if option == "2":
         from functions.learning_mod import learning
