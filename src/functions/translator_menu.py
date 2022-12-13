@@ -7,6 +7,7 @@ def translator_menu():
         Press 1 to Continue in Translator Mode
         Press 2 for Learning Mode 
         Press 3 for Quiz Mode
+        Type \home to return Home
         Type \exit to Exit at any time\n''')
         # Type \home to Return to the main menu
 

@@ -108,8 +108,8 @@ def learning():
 
 
 # To resolve
-# error handling
+# error handling around nonexistent or invalid files
 # output percentage of correctly answered. list accessibility/break statements?
 # random gen without repeating
-# code in keyboardInterrupt \quit option
+
 

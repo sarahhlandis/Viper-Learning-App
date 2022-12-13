@@ -8,6 +8,7 @@ def quiz_menu():
         Press 1 to Continue in Quiz Mode
         Press 2 for Learning Mode 
         Press 3 for Translator Mode
+        Type \home to return Home
         Type \exit to Exit at any time \n''')
 
     option = handleUserInput("What would you like to do? \n")

@@ -32,10 +32,13 @@ def viper_main():
         # if option=="\exit":
         #         print ("\nThanks for learning. Come back soon to pick up where you left off! \n")
         #         exit(0)
-        
+
 viper_main()
 
+# teacher = []
+# print(teacher.append('akash'))
+# print(teacher)
 
 # To resolve
 # code in try/except block for invalid entries.. 
-# review while loop, maybe put into main func()
+# review while loop, maybe put into main func()?
