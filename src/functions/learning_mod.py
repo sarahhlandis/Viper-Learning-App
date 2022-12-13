@@ -4,7 +4,7 @@ import random
 from functions.learning_menu import learning_menu
 from functions.terminal import clear_terminal
 from pathlib import Path
-
+from functions.user_input import *
 
 def learning():
 
@@ -54,7 +54,7 @@ def learning():
             # tries = 0
             x=3
             for tries in range(1, 4):
-                user_entry = (input(
+                user_entry = (handleUserInput(
                     f"What is the {language_to_practice} translation of {practice_word}?\n"
                 )).lower()
                 # tries += 1 # to iterate up to 3 tries (inclusive)
@@ -78,7 +78,7 @@ def learning():
     prompts to get started - \n''')
 
     # Get user input to determine which language as base study
-    practice_lang = input(
+    practice_lang = handleUserInput_stringOnly(
         '''\nIf you wish to study from foreign language translations (note: this 
         will require you to respond in eng), type English.\n 
         If you wish to study from english translations (note: this 
@@ -91,7 +91,7 @@ def learning():
     # Allow user input to choose which file they wish to study
         # Create path that represents the current directory
     target_dir = Path('.')
-    filename = input("Please enter the filename you wish to study: \n").lower()
+    filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
     # searches thru files and returns matching
     filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
 
@@ -107,7 +107,7 @@ def learning():
 
 
 
-# TBC
+# To resolve
 # error handling
 # output percentage of correctly answered. list accessibility/break statements?
 # random gen without repeating

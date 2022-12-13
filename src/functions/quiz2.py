@@ -5,6 +5,7 @@ import threading
 from pathlib import Path
 from functions.terminal import clear_terminal
 from functions.quiz_menu import quiz_menu
+from functions.user_input import *
 
 def quiz():
     global quiz_timer
@@ -37,7 +38,7 @@ def quiz():
             test_word = vocabulary[random_index][lang_index]
 
             # compares user guess to corresponding word
-            user_entry = (input(
+            user_entry = (handleUserInput(
                 f"What is the translation of {test_word}?\n"
             )).lower()
             if quiz_timer==0:   # prints internal menu
@@ -97,13 +98,13 @@ def quiz():
     # Allow user input to choose which file they wish to study
         # Create path that represents the current directory
     target_dir = Path('.')
-    filename = input("Please enter the filename you wish to study: \n").lower()
+    filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
     # searches thru files and returns matching
     filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
 
-    quiz_timer=int(input("\nHow much time would you like on the clock(in seconds)? \n"))
+    quiz_timer=int(handleUserInput("\nHow much time would you like on the clock(in seconds)? \n"))
 
-    ready=input("\nAre you ready to begin? \n")
+    ready=handleUserInput_stringOnly("\nAre you ready to begin? \n")
 
     # determine user input to run correct func
     if ready.lower() == "yes":
@@ -113,14 +114,14 @@ def quiz():
         countdown()
         print("\n")
         quiz_word()
-    else: 
+    elif ready.lower() == "no": 
         print("\nPlease come back when you're ready!")
         quiz_menu()
    
 
-
 # To resolve
 # list setup for correct/incorrect - unaccessed? not printing
+# code in to output populated quiz score sheet file
 # testing
 # Error Handling
 
