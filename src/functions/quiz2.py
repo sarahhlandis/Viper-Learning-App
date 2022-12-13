@@ -40,8 +40,9 @@ def quiz():
             user_entry = (input(
                 f"What is the translation of {test_word}?\n"
             )).lower()
-            if quiz_timer==0:   # prints menu
+            if quiz_timer==0:   # prints internal menu
                 # break
+                # print (' '.join(correct))
                 quiz_menu()
             # compares user guess to corresponding word
             if user_entry == (vocabulary[random_index][guessword]).lower():
@@ -112,19 +113,17 @@ def quiz():
         countdown()
         print("\n")
         quiz_word()
-        # quiz_menu()
-    else: print("Please xxxxx")
+    else: 
+        print("\nPlease come back when you're ready!")
+        quiz_menu()
    
 
 
 # To resolve
-# Goal - timer running in background but displaying simultaneously
 # list setup for correct/incorrect - unaccessed? not printing
 # testing
 # Error Handling
-# quiz menu not printing at end of quiz
-# once timer ends.. if in middle of question, still allows user to press enter as
-    # their input, causing a type error (no positional arg)
+
 
 
 

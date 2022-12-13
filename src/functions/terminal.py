@@ -1,5 +1,7 @@
 import os
 
+# function to clear terminal
+
 def clear_terminal():
     print(os)
     if os.name == "nt": # If the user is on windows
