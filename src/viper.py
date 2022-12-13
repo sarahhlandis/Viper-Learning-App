@@ -28,7 +28,7 @@ while option!="\exit":
                 from functions.quiz2 import quiz
                 quiz()
 if option=="\exit":
-        print ("\n Thanks for learning. Come back soon to pick up where you left off! \n")
+        print ("\nThanks for learning. Come back soon to pick up where you left off! \n")
         exit(0)
 
 # code in try/except block for invalid entries.. 
