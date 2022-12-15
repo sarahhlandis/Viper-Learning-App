@@ -1,6 +1,4 @@
-
-
-# User input handling
+# USER INPUT HANDLING
 
 def handleUserInput(prompt_string):
 

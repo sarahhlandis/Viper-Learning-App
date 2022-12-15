@@ -2,6 +2,7 @@
 
 import googletrans
 import textblob
+
 from functions.translator_menu import translator_menu
 from functions.user_input import *
 

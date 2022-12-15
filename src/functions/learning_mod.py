@@ -6,6 +6,8 @@ from functions.terminal import clear_terminal
 from pathlib import Path
 from functions.user_input import *
 
+# LEARNING MODE
+
 def learning():
 
     def learning_mode(file_to_open, language_to_practice):
@@ -16,8 +18,8 @@ def learning():
             word_check(vocabulary, language_to_practice)    # pass list and lang to func
 
     # Initialize empty list to store correct and incorrect values
-    correct = []
-    incorrect = []
+    correct = set()
+    incorrect = set()
 
     def word_check(vocabulary, language_to_practice):
 
@@ -61,15 +63,33 @@ def learning():
                 x-=1 # to show tries left on output of each guess (when wrong)
                 if user_entry == (vocabulary[random_word][guessword]).lower():
                     print("Nice work! That's correct. \n")
+                    # correct.append(practice_word)
+                    correct.add(practice_word)
                     break  # (break loop if correct)
-                    # return correct.append(practice_word)    # return correct word to list
+                    # return correct.append(practice_word)    # add correct word to list
                 elif user_entry != (vocabulary[random_word][guessword]).lower():
                     print(
                         f"Incorrect. You have {x} tries remaining! \n"
                     )
-                    # return incorrect.append(practice_word)
+                    incorrect.add(practice_word)
             # if counter==list_len:
             #     break
+        # if user guessed any right
+        if len(correct)>0:
+            print("\nAwesome work, here are the words you guessed correctly!\n")
+            for word in correct:
+                print (word)
+        else: 
+            print ("\nYou didn't get any correct, but more studying can fix this!\n")
+        
+        # if user guessed any wrong
+        if len(incorrect)>0:
+            print("\nBelow are the words we need to work on: \n")
+            for word in incorrect:
+                print (word)
+        # otherwise they guessed them all correctly
+        else: 
+            print ("\nMaybe its time for a quiz...\n")
         learning_menu()
         
 

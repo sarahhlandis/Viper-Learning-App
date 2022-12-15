@@ -2,7 +2,8 @@ from functions.terminal import clear_terminal
 from functions.quiz import quiz
 from functions.user_input import handleUserInput
 
-# Menu once already in Learning Mode
+# MENU ONCE IN LEARNING MODE
+
 def learning_menu():
     print('''\nWould you like to continue?
         Press 1 to Continue in Learning Mode

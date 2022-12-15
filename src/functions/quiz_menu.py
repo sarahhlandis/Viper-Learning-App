@@ -1,7 +1,8 @@
 from functions.terminal import clear_terminal
 from functions.user_input import handleUserInput
 
-# Menu once in Quiz Mode
+# MENU ONCE IN QUIZ MODE
+
 def quiz_menu():
 
     print('''\nWould you like to continue?

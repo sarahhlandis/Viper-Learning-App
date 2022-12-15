@@ -1,7 +1,8 @@
 from functions.terminal import clear_terminal
 from functions.user_input import handleUserInput
 
-# Menu once in Translator
+# MENU ONCE IN TRANSLATOR
+
 def translator_menu():
     print('''\nWould you like to continue?
         Press 1 to Continue in Translator Mode

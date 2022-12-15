@@ -1,6 +1,6 @@
 import os 
 
-# function to clear terminal
+# CLEAR TERMINAL FUNC
 
 def clear_terminal():
     print(os)
