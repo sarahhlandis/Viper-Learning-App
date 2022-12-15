@@ -17,7 +17,7 @@ def learning():
             vocabulary = list(open_file)    # convert file to list of lists (per row)
             word_check(vocabulary, language_to_practice)    # pass list and lang to func
 
-    # Initialize empty list to store correct and incorrect values
+    # Initialize empty set to store correct and incorrect values
     correct = set()
     incorrect = set()
 
@@ -33,7 +33,7 @@ def learning():
             lang_index = 0
 
         # statement switches the index to correspond with language of their answer, 
-        # to determine if a match (correct)
+            # to determine if a match (correct)
         if lang_index == 1:
             guessword = 0
         else: guessword = 1
@@ -44,12 +44,12 @@ def learning():
         # these are the header rows in the csv file
 
 
-        while counter < list_len:  # # # this loop runs past list length by 1! # # #
+        while counter < list_len:
             random_word = random.randint(1,
                                         list_len)  # figure out how gen random int
-            # # without repeating one that has already occurred
+                    # without repeating one that has already occurred
 
-            #generates index of random practice word relative to lang chosen
+            # generates index of random practice word relative to lang chosen
             practice_word = vocabulary[random_word][lang_index]
             counter+=1
 
@@ -129,7 +129,6 @@ def learning():
 
 # To resolve
 # error handling around nonexistent or invalid files
-# output percentage of correctly answered. list accessibility/break statements?
 # random gen without repeating
 
 

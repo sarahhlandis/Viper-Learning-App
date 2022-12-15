@@ -42,5 +42,5 @@ viper_main()
 # print(teacher)
 
 # To resolve
-# code in try/except block for invalid entries.. 
+# code in try/except block for invalid entries.. translator menu, 
 # review while loop, maybe put into main func()?

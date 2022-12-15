@@ -13,7 +13,7 @@ def learning_menu():
         Type \exit to Exit at any time \n''')
 
     option = handleUserInput("What would you like to do? \n")
-    # if option!="\exit":
+
     if option == "1":
         clear_terminal()
         print("\nWelcome Back!\n")
@@ -26,6 +26,4 @@ def learning_menu():
     if option == "3":
         clear_terminal()
         quiz()
-    # elif option=="\exit":
-    #         print ("\nThanks for learning. Come back soon to pick up where you left off!\n")
-    #         exit(0)
+   

@@ -10,10 +10,9 @@ def translator_menu():
         Press 3 for Quiz Mode
         Type \home to return Home
         Type \exit to Exit at any time\n''')
-        # Type \home to Return to the main menu
 
     option = handleUserInput("What would you like to do? \n")
-    # if option!="\exit":
+    
     if option == "1":
         clear_terminal()
         print("Welcome Back!\n")
@@ -27,6 +26,4 @@ def translator_menu():
         clear_terminal()
         from functions.quiz import quiz
         quiz()
-    # elif option=="\exit":
-    #         print ("Thanks for learning. Come back soon to pick up where you left off!\n")
-    #         exit(0)
+   

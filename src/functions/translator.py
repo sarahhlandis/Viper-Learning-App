@@ -17,7 +17,7 @@ language_list=list(languages.values())
 
 # Function for translator
 def translator():
-    #Translate mode entry message
+    # Translate mode entry message
     print('''You're now in Viper Translate Mode. Please follow the below
         prompts to translate - \n''')
 
@@ -39,5 +39,6 @@ def translator():
 
     # Translates user text
     translation=words.translate(from_lang=original_key,to=desired_key)
+    # Returns translation highlighted green
     print (f"{Back.GREEN}{translation}")
     translator_menu()
