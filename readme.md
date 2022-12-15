@@ -72,7 +72,8 @@ Progress as of Thurs Dec 15
 ### Help Documentation and Installation Guide
 1. Set Up Instructions
     1. To start, please download all the files in this repository to your desktop.
-    2. 
+    2. Search your computer for Terminal.
+    3. Once in Terminal, 
 2. Required Dependencies
 3. System Requirements
 4. Command Line Arguments

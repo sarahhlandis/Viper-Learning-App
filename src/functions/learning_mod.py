@@ -11,15 +11,10 @@ from functions.user_input import *
 def learning():
 
     def learning_mode(file_to_open, language_to_practice):
-
-        while True:
-            try:
-                with open(file_to_open) as readFile:
-                    open_file = csv.reader(readFile)
-                    vocabulary = list(open_file)    # convert file to list of lists (per row)
-                    word_check(vocabulary, language_to_practice)    # pass list and lang to func
-            except IndexError:
-                print("Sorry, your file name wasn't found.")  
+        with open(file_to_open) as readFile:
+            open_file = csv.reader(readFile)
+            vocabulary = list(open_file)    # convert file to list of lists (per row)
+            word_check(vocabulary, language_to_practice)    # pass list and lang to func
 
     # Initialize empty set to store correct and incorrect values
     correct = set()
@@ -101,54 +96,52 @@ def learning():
     print('''\nYou're now in Viper Learning Mode. Please follow the below
     prompts to get started - \n''')
 
-    # Get user input to determine which language as base study
+    # determine user input to run correct func
     practice_lang = handleUserInput_stringOnly(
-        '''\nIf you wish to study from foreign language translations (note: this 
-        will require you to respond in eng), type English.\n 
-        If you wish to study from english translations (note: this 
-        will require you to respond in foreign lang), type Foreign: \n''')
-
-
-
+                '''\nIf you wish to study from foreign language translations (note: this 
+                will require you to respond in eng), type English.\n 
+                If you wish to study from english translations (note: this 
+                will require you to respond in foreign lang), type Foreign: \n''')
+            
+        
     clear_terminal() # Clear terminal before user enters file name
 
     # Allow user to choose which file they wish to study
         # Create path that represents the current directory
 
-    target_dir = Path('.')
-    filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
-    # searches thru files and returns matching
-    filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
+    # target_dir = Path('.')
+    # filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
+    # # searches thru files and returns matching
+    # filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
+    
+    # Allow user to choose which file they wish to study
+        # Create path that represents the current directory
 
-#  # # # Trying to implement error handling around the file input 
-    # def learning_mode2(file_to_open, language_to_practice):
-    #     while True:
-    #         target_dir = Path('.')
-    #         filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
-    #         filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
-    #         try:
-    #             with open(file_to_open) as readFile:
-    #                 open_file = csv.reader(readFile)
-    #                 vocabulary = list(open_file)    # convert file to list of lists (per row)
-    #                 word_check(vocabulary, language_to_practice)    # pass list and lang to func
-    #             break
-    #         except IndexError:
-    #             print("Please enter a valid file name.")
+    while True:
+        try:
+            target_dir = Path('.')
+            filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
+            # searches thru files and returns matching
+            filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
+            break
+        except IndexError:
+            print("\nSorry that file doesn't seem to exist. Please enter a valid file name.\n")
 
 
     # determine user input to run correct func
     if practice_lang.lower() == "english":
         print("\n")
         learning_mode(filepath, practice_lang.lower())
-
-    if practice_lang.lower() == "foreign":
+    elif practice_lang.lower() == "foreign":
         print("\n")
         learning_mode(filepath, practice_lang.lower())
+    else:
+        print("Please enter a recognized language.")
+    
 
 
 
 # To resolve
-# error handling around nonexistent or invalid files
 # random gen without repeating
 
     

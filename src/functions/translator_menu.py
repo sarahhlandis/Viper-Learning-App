@@ -18,11 +18,11 @@ def translator_menu():
         print("Welcome Back!\n")
         from functions.translator import translator
         translator()
-    if option == "2":
+    elif option == "2":
         from functions.learning_mod import learning
         clear_terminal()
         learning()
-    if option == "3":
+    elif option == "3":
         clear_terminal()
         from functions.quiz import quiz
         quiz()
