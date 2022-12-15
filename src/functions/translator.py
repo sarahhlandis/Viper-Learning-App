@@ -1,7 +1,9 @@
 # TRANSLATOR MODE
-
 import googletrans
 import textblob
+from colorama import Back, init
+# below allows to not have to reset color for prints after colorama
+init(autoreset=True)
 
 from functions.translator_menu import translator_menu
 from functions.user_input import *
@@ -37,5 +39,5 @@ def translator():
 
     # Translates user text
     translation=words.translate(from_lang=original_key,to=desired_key)
-    print (f"\n{translation}")
+    print (f"{Back.GREEN}{translation}")
     translator_menu()
