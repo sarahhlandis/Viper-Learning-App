@@ -33,8 +33,8 @@ It features
 - Upon finishing the quiz, the application will generate a quiz report file which the user can take a look at.
 
 Things to note: 
-- All sections will be able to be accessed internally from any other mode.
-- At any given input point, the user can also exit the program completely if they wish.
+- All sections will be able to be accessed internally from any of the other modes.
+- At any given input point, the user can also exit completely or return to the home of the program if they wish.
 
 ### Implementation Plan
 - Feature 1: I plan to prioritize the user input functionality first and foremost, as this is integral to the application running smoothly. Feature 1 will also include the basic translation mode as well.
@@ -48,7 +48,11 @@ Things to note:
 Changes along the way (as of Dec 13):
 ![Feature1](./docs/input.png)
 ![Feature2](./docs/learning.png)
-![Feature3](.docs/quiz.png)
+![Feature3](./docs/quiz.png)
+
+Changes along the way (as of Dec 15):
+![Feature2](./docs/learning2.png)
+
 
 #### Poject Management
 - I chose to use Trello to manage this project. Please see below images of the implementation plan (with dates) I intend to follow in terms of building out the features of the application.
@@ -60,6 +64,9 @@ Progress as of Sat Dec 10
 
 Progress as of Tues Dec 13
     ![ImplementationPlan-Update2](./docs/implementation_update2.png)
+
+Progress as of Thurs Dec 15
+    ![ImplementationPlan-Update2](./docs/implementation_update3.png)
 
 
 ### Help Documentation and Installation Guide

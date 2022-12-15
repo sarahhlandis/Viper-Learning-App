@@ -1,1 +1,3 @@
-python3 viper.py
+#!/bin/bash
+
+python3 src/viper.py

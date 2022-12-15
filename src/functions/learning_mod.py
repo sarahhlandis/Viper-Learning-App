@@ -12,10 +12,14 @@ def learning():
 
     def learning_mode(file_to_open, language_to_practice):
 
-        with open(file_to_open) as readFile:
-            open_file = csv.reader(readFile)
-            vocabulary = list(open_file)    # convert file to list of lists (per row)
-            word_check(vocabulary, language_to_practice)    # pass list and lang to func
+        while True:
+            try:
+                with open(file_to_open) as readFile:
+                    open_file = csv.reader(readFile)
+                    vocabulary = list(open_file)    # convert file to list of lists (per row)
+                    word_check(vocabulary, language_to_practice)    # pass list and lang to func
+            except IndexError:
+                print("Sorry, your file name wasn't found.")  
 
     # Initialize empty set to store correct and incorrect values
     correct = set()
@@ -108,12 +112,28 @@ def learning():
 
     clear_terminal() # Clear terminal before user enters file name
 
-    # Allow user input to choose which file they wish to study
+    # Allow user to choose which file they wish to study
         # Create path that represents the current directory
+
     target_dir = Path('.')
     filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
     # searches thru files and returns matching
     filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
+
+#  # # # Trying to implement error handling around the file input 
+    # def learning_mode2(file_to_open, language_to_practice):
+    #     while True:
+    #         target_dir = Path('.')
+    #         filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
+    #         filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
+    #         try:
+    #             with open(file_to_open) as readFile:
+    #                 open_file = csv.reader(readFile)
+    #                 vocabulary = list(open_file)    # convert file to list of lists (per row)
+    #                 word_check(vocabulary, language_to_practice)    # pass list and lang to func
+    #             break
+    #         except IndexError:
+    #             print("Please enter a valid file name.")
 
 
     # determine user input to run correct func
@@ -131,4 +151,4 @@ def learning():
 # error handling around nonexistent or invalid files
 # random gen without repeating
 
-
+    
