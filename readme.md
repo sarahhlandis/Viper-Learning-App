@@ -75,6 +75,7 @@ Progress as of Thurs Dec 15
     2. Search your computer for Terminal.
     3. Once in Terminal, 
 2. Required Dependencies
+    - The required dependencies can be found in the requirements.txt folder. Please note, internet connection is required to use the translator mode.
 3. System Requirements
 4. Command Line Arguments
 
