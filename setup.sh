@@ -23,6 +23,7 @@ if command -v python3 &> /dev/null
     echo "Setting up your learning space..."
     sleep 1
     ./runscript.sh
+    exit
 fi
 if command -v python &> /dev/null
   then
@@ -38,4 +39,5 @@ if command -v python &> /dev/null
     echo "Setting up your learning space..."
     sleep 1
     ./runscript.sh
+    exit
 fi
