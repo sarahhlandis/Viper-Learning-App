@@ -1,4 +1,4 @@
-# Translator and Language Learning Terminal Application
+# Viper: A Translator and Language Learning Terminal Application
 
 ### Sources Used:
 - CSV docs populated via https://copylists.com/french/list-basic-french-words/#google_vignette
