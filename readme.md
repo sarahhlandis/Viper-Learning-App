@@ -82,65 +82,67 @@ Progress as of Friday Dec 16
 
 
 ### Installation Guide and Help Documentation
-1. Installation Guide
-    1. Git Clone
+#### 1. Installation Guide
+1. Git Clone
         - Ensure you have Python installed on your computer. 
         Run ```python3 --version``` to confirm. If you recieve a message back saying something along the lines of
         ```python3: command not found```
-        run ```python --version``` to be certain as you may have a different version. 
-        Make sure your python version begins with a 3.
+        - run ```python --version``` to be certain as you may have a different version. 
+        * Make sure your python version begins with a 3.
         To download python, visit: [Python official website](https://www.python.org/downloads/)
         - Once you're set up with Python3, open Terminal and cd into your desired location on your computer.
         - Create a directory and initialize it to get ready for cloning a remote repository.
         Run ```git init``` to do this.
-        - From within that directory, run ```git clone git@github.com:sarahhlandis/Terminal_Application.git```
+        - From within that directory, run 
+        ```git clone git@github.com:sarahhlandis/Terminal_Application.git```
         - cd into the directory titled Terminal_Application-main
         - To setup all required dependencies and activate the virtual environment, run 
         ```bash setup.sh```
         - Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
 
-    2. Download Zip from GitHub
-    - Ensure you have Python installed on your computer. 
-        Run ```python3 --version``` to confirm. If you recieve a message back saying something along the lines of
-        ```python3: command not found```
-        run ```python --version``` to be certain as you may have a different version. 
-        Make sure your python version begins with a 3.
-        To download python, visit: [Python official website](https://www.python.org/downloads/)
-        - Once you're set up with Python3, return to the [Viper Repository](https://github.com/sarahhlandis/Terminal_Application) and click the green < >Code button.
-        - Download the zip file to your computer and open it (a main directory will appear called Terminal_Application-main)
-        - Open Terminal and cd into the directory titled Terminal_Application-main
-        - To setup all required dependencies and activate the virtual environment, run 
-        ```bash setup.sh```
-        - Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
+2. Download Zip from GitHub
+- Ensure you have Python installed on your computer. 
+    - Run ```python3 --version``` to confirm. 
+    - If you recieve a message back saying something along the lines of ```python3: command not found```
+        - run ```python --version``` to be certain as you may have a different version. 
+    Make sure your python version begins with a 3.
+    - To download python, visit: [Python official website](https://www.python.org/downloads/)
+- Once you're set up with Python3, return to the [Viper Repository](https://github.com/sarahhlandis/Terminal_Application) and click the green < >Code button.
+- Download the zip file to your computer and open it (a main directory will appear called Terminal_Application-main)
+- Open Terminal and cd into the directory titled Terminal_Application-main
+- To setup all required dependencies and activate the virtual environment, run 
+```bash setup.sh```
+- Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
 
-2. Required Dependencies
+#### 2. Required Dependencies
     - The required dependencies can be found in the requirements.txt file, located at ```Terminal_Application-main/requirements.txt```. Please note, an internet connection is required to use the translator mode. 
     - Python3 as noted above
 
-3. Help Documentation:
-    - This app is meant to be used by anyone for their relevant foreign language learning.
-    1. Uploading your own files: 
-    - To enable this app to suit your language requirements, please add your CSV files to the CSV folder:
-        ```Terminal_Application-main/src/csv```
-    This is where you are able to store your own language learning files in order to populate the personalized quiz and learning module within the application.
-        - When adding your own CSV files, please ensure you have a header row, with two columns: English and the language of your choosing. Please be sure the first column is English and the second is the foreign language.
-            - This will ensure that the application can read your files accurately as the code is built around this stylistic formatting.
-        - Also note, you can create these files in excel and then export them as required into CSV format. * The application is compatible with CSV files only. *
-    2. Character sensitivity:
-    - Being that Viper is a language learning application designed to help you learn new words, your responses are character-sensitive. This means that if you spell the word correctly, but neglect the proper accenting, the word will be marked wrong. (e.g. february = février, not fevrier)
-    * Please be sure you utilize appropriate accenting if your intended learning language includes special characters.
-    - To apply special characters, you can:
-        1. Download the relevant language keyboard 
-        2. Memorize your keyboard's deadkeys - this may not be as handy specifically within the quiz section, as there is a time component included.
-        ** Please see the below relevant documentation for methods on how to type accented keys:
-            - [Mac users](https://support.apple.com/en-au/guide/mac-help/mh27474/mac)
-            - [Windows users](https://nerdschalk.com/how-to-type-accents-on-windows/)
+#### 3. Help Documentation:
+- This app is meant to be used by anyone for their relevant foreign language learning.
+1. Uploading your own files: 
+- To enable this app to suit your language requirements, please add your CSV files to the CSV folder:
+    ```Terminal_Application-main/src/csv```
+This is where you are able to store your own language learning files in order to populate the personalized quiz and learning module within the application.
+    - When adding your own CSV files, please ensure you have a header row, with two columns: English and the language of your choosing. Please be sure the first column is English and the second is the foreign language.
+        - This will ensure that the application can read your files accurately as the code is built around this stylistic formatting.
+    - Also note, you can create these files in excel and then export them as required into CSV format. ** The application is compatible with CSV files only.
+2. Character sensitivity:
+- Being that Viper is a language learning application designed to help you learn new words, your responses are character-sensitive. This means that if you spell the word correctly, but neglect the proper accenting, the word will be marked wrong. (e.g. february = février, not fevrier)
+** Please be sure you utilize appropriate accenting if your intended learning language includes special characters.
+- To apply special characters, you can:
+    1. Download the relevant language keyboard 
+    2. Memorize your keyboard's deadkeys - this may not be as handy specifically within the quiz section, as there is a time component included.
+    ** Please see the below relevant documentation for methods on how to type accented keys:
+        - [Mac users](https://support.apple.com/en-au/guide/mac-help/mh27474/mac)
+        - [Windows users](https://nerdschalk.com/how-to-type-accents-on-windows/)
 
-4. Application Development Testing
+#### 4. Application Development Testing
 - Unit testing was conducted throughout the application's development on various features.
 - If you wish to view the outcome of some of the documented unit testing, please refer to ```Terminal_Application-main/docs/app_testing``` where you can view the outcomes of the process.
 For your convenience, you may also view it's findings here:
 ![Testing](ManualTesting.pdf)
+
 
 
 
