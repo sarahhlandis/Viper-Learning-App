@@ -57,12 +57,12 @@ To note:
 ![Feature2](./docs/f2.png)
 ![Feature3](./docs/f3.png)
 
-Changes along the way (as of Dec 13):
+#### Changes along the way (as of Dec 13):
 ![Feature1](./docs/input.png)
 ![Feature2](./docs/learning.png)
 ![Feature3](./docs/quiz.png)
 
-Changes along the way (as of Dec 15):
+#### Changes along the way (as of Dec 15):
 ![Feature2](./docs/learning2.png)
 
 
