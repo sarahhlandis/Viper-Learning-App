@@ -39,10 +39,3 @@ def viper_main():
 
 viper_main()
 
-# teacher = []
-# print(teacher.append('akash'))
-# print(teacher)
-
-# To resolve
-# code in try/except block for invalid entries.. translator menu, 
-# review while loop, maybe put into main func()?

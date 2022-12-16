@@ -94,35 +94,7 @@ def learning():
         learning_menu()
         
 
-    # while True:
-    #         # determine user input to run correct func
-    #         practice_lang = handleUserInput_stringOnly(
-    #                 '''\nIf you wish to study from foreign language translations (note: this 
-    #                 will require you to respond in eng), type English.\n 
-    #                 If you wish to study from english translations (note: this 
-    #                 will require you to respond in foreign lang), type Foreign: \n''')     
-    #             # determine user input to run correct func
-    #         if practice_lang.lower() == "english":
-    #             print("\n")
-    #             learning_mode(filepath, practice_lang.lower())
-    #             break
-    #         elif practice_lang.lower() == "foreign":
-    #             print("\n")
-    #             learning_mode(filepath, practice_lang.lower())
-    #             break
-    #         # else:
-    #         #     print("Please enter a recognized language.")
-        
     clear_terminal() # Clear terminal before user enters file name
-
-    # Allow user to choose which file they wish to study
-        # Create path that represents the current directory
-
-    # target_dir = Path('.')
-    # filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
-    # # searches thru files and returns matching
-    # filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
-    # Translate mode opening greeting message
 
     # Learning mode entry greeting message
     print('''\nYou're now in Viper Learning Mode. Please follow the below
@@ -163,10 +135,4 @@ def learning():
     elif practice_lang.lower() == "foreign":
         print("\nGreat, let's begin!\n")
         learning_mode(filepath, practice_lang.lower())
-    
-   
-
-# To resolve
-# random gen without repeating
-
     

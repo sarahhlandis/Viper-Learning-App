@@ -46,7 +46,7 @@ def translator():
                 translator_menu()
                 break
             except UnboundLocalError:
-                print ('''\nUnable to process. Please check that your languages are 
+                print ('''\nUnable to process. Please check that both languages are 
                 recognized and try again.\n''')
            
             

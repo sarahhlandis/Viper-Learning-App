@@ -144,13 +144,6 @@ def quiz():
     print('''\nYou're now in Viper Quiz Mode. Please follow the below
     prompts to get started - \n''')
 
-    # Allow user input to choose which file they wish to study
-        # Create path that represents the current directory
-    # target_dir = Path('.')
-    # filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
-    # # searches thru files and returns matching
-    # filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
-
     while True:
         try:
             target_dir = Path('.')
