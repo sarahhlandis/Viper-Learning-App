@@ -22,8 +22,7 @@ if command -v python3 &> /dev/null
     sleep 1
     echo "Setting up your learning space..."
     sleep 1
-    python3 viper.py
-    deactivate
+    runscript.sh
 fi
 if command -v python &> /dev/null
   then
@@ -38,6 +37,5 @@ if command -v python &> /dev/null
     sleep 1
     echo "Setting up your learning space..."
     sleep 1
-    python viper.py
-    deactivate
+    runscript.sh
 fi
