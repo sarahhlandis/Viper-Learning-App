@@ -22,23 +22,32 @@ def translator():
         prompts to translate - \n''')
 
     # Get user input for original language
-    original_lang=handleUserInput_stringOnly("Origin language: ").lower()
-    for key, value in languages.items():
-        if (value==original_lang):
-            original_key=key
+    while True:
+            original_lang=handleUserInput_stringOnly("Origin language: ").lower()
+            for key, value in languages.items():
+                if (value==original_lang):
+                    original_key=key
+       
+            # Get user input for desired language
+            desired_lang=handleUserInput_stringOnly("Desired language: ").lower()
+            for key, value in languages.items():
+                if (value==desired_lang):
+                    desired_key=key
 
-    # Get user input for desired language
-    desired_lang=handleUserInput_stringOnly("Desired language: ").lower()
-    for key, value in languages.items():
-        if (value==desired_lang):
-            desired_key=key
+            # Get user input that determines phrase they wish to translate
+            sentence=handleUserInput("Enter phrase: ")
+            words=textblob.TextBlob(sentence)
 
-    # Get user input that determines phrase they wish to translate
-    sentence=handleUserInput("Enter phrase: ")
-    words=textblob.TextBlob(sentence)
-
-    # Translates user text
-    translation=words.translate(from_lang=original_key,to=desired_key)
-    # Returns translation highlighted green
-    print (f"{Back.GREEN}{translation}")
-    translator_menu()
+            # Translates user text
+            try: 
+                translation=words.translate(from_lang=original_key,to=desired_key)
+                # Returns translation highlighted green
+                print (f"{Back.GREEN}{translation}")
+                translator_menu()
+                break
+            except UnboundLocalError:
+                print ('''\nUnable to process. Please check that your languages are 
+                recognized and try again.\n''')
+           
+            
+    

@@ -65,7 +65,7 @@ def learning():
                     # correct.append(practice_word)
                     correct.add(practice_word)
                     break  # (break loop if correct)
-                    # return correct.append(practice_word)    # add correct word to list
+                    # return correct.append(practice_word)    # adds correct word to list
                 elif user_entry != (vocabulary[random_word][guessword]).lower():
                     print(
                         f"Incorrect. You have {x} tries remaining! \n"
@@ -73,15 +73,17 @@ def learning():
                     incorrect.add(practice_word)
             # if counter==list_len:
             #     break
-        # if user guessed any right
+
+        # if user guessed any words right
         if len(correct)>0:
             print("\nAwesome work, here are the words you guessed correctly!\n")
             for word in correct:
                 print (word)
+        # otherwise they got them all wrong
         else: 
             print ("\nYou didn't get any correct, but more studying can fix this!\n")
-        
-        # if user guessed any wrong
+
+        # if user guessed any words wrong
         if len(incorrect)>0:
             print("\nBelow are the words we need to work on: \n")
             for word in incorrect:
@@ -92,17 +94,24 @@ def learning():
         learning_menu()
         
 
-    # Translate mode opening greeting message
-    print('''\nYou're now in Viper Learning Mode. Please follow the below
-    prompts to get started - \n''')
-
-    # determine user input to run correct func
-    practice_lang = handleUserInput_stringOnly(
-                '''\nIf you wish to study from foreign language translations (note: this 
-                will require you to respond in eng), type English.\n 
-                If you wish to study from english translations (note: this 
-                will require you to respond in foreign lang), type Foreign: \n''')
-            
+    # while True:
+    #         # determine user input to run correct func
+    #         practice_lang = handleUserInput_stringOnly(
+    #                 '''\nIf you wish to study from foreign language translations (note: this 
+    #                 will require you to respond in eng), type English.\n 
+    #                 If you wish to study from english translations (note: this 
+    #                 will require you to respond in foreign lang), type Foreign: \n''')     
+    #             # determine user input to run correct func
+    #         if practice_lang.lower() == "english":
+    #             print("\n")
+    #             learning_mode(filepath, practice_lang.lower())
+    #             break
+    #         elif practice_lang.lower() == "foreign":
+    #             print("\n")
+    #             learning_mode(filepath, practice_lang.lower())
+    #             break
+    #         # else:
+    #         #     print("Please enter a recognized language.")
         
     clear_terminal() # Clear terminal before user enters file name
 
@@ -113,33 +122,49 @@ def learning():
     # filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
     # # searches thru files and returns matching
     # filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
-    
+    # Translate mode opening greeting message
+
+    # Learning mode entry greeting message
+    print('''\nYou're now in Viper Learning Mode. Please follow the below
+    prompts to get started - \n''')
+
+    while True:
+            # determine user input to run correct func
+            practice_lang = handleUserInput_stringOnly(
+                    '''\nIf you wish to study from foreign language translations (note: this 
+                    will require you to respond in eng), type English.\n 
+                    If you wish to study from english translations (note: this 
+                    will require you to respond in foreign lang), type Foreign: \n''')     
+                # determine user input to run correct func
+            if practice_lang.lower() == "english":
+                break
+            elif practice_lang.lower() == "foreign":
+                break
+            else:
+                print("\nPlease enter a recognized language.")
+
     # Allow user to choose which file they wish to study
         # Create path that represents the current directory
-
     while True:
         try:
             target_dir = Path('.')
-            filename = handleUserInput("Please enter the filename you wish to study: \n").lower()
+            filename = handleUserInput("\nPlease enter the filename you wish to study: \n").lower()
             # searches thru files and returns matching
             filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
             break
         except IndexError:
             print("\nSorry that file doesn't seem to exist. Please enter a valid file name.\n")
 
-
+    clear_terminal() # Clear terminal before starting
     # determine user input to run correct func
     if practice_lang.lower() == "english":
-        print("\n")
+        print("\nGreat, let's begin!\n")
         learning_mode(filepath, practice_lang.lower())
     elif practice_lang.lower() == "foreign":
-        print("\n")
+        print("\nGreat, let's begin!\n")
         learning_mode(filepath, practice_lang.lower())
-    else:
-        print("Please enter a recognized language.")
     
-
-
+   
 
 # To resolve
 # random gen without repeating

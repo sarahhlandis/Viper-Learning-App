@@ -16,24 +16,26 @@ def viper_main():
                 Press 3 for Quiz Mode 
                 Type \exit to Exit at any time \n''')
 
+        while True:
         # Menu Options from Start
-        option = handleUserInput("\nWhat would you like to do? \n")
-        # while option!="\exit":
-        if option == "1":
-                clear_terminal()
-                from functions.translator import translator
-                translator()
-        if option == "2":
-                clear_terminal()
-                from functions.learning_mod import learning
-                learning()
-        if option == "3":
-                clear_terminal()
-                from functions.quiz import quiz
-                quiz()
-        # if option=="\exit":
-        #         print ("\nThanks for learning. Come back soon to pick up where you left off! \n")
-        #         exit(0)
+                option = handleUserInput("\nWhat would you like to do? \n")
+                # while option!="\exit":
+                if option == "1":
+                        clear_terminal()
+                        from functions.translator import translator
+                        translator()
+                elif option == "2":
+                        clear_terminal()
+                        from functions.learning_mod import learning
+                        learning()
+                elif option == "3":
+                        clear_terminal()
+                        from functions.quiz import quiz
+                        quiz()
+                else: 
+                        print('''\nThat's not a valid menu option. Please try again
+                        from the selection above.''')
+                        
 
 viper_main()
 

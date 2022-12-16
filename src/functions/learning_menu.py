@@ -36,20 +36,19 @@ def learning_menu():
             Type \home to return Home
             Type \exit to Exit at any time \n''')
     while True:
-        try:
-            option = handleUserInput("What would you like to do? \n")
-            if option == "1":
-                clear_terminal()
-                print("\nWelcome Back!\n")
-                from functions.learning_mod import learning
-                learning()
-            elif option == "2":
-                clear_terminal()
-                from functions.translator import translator
-                translator()
-            elif option == "3":
-                clear_terminal()
-                quiz()
-            break
-        except Exception as e:
-            print("Please enter valid input to continue. ")
+        option = handleUserInput("What would you like to do? \n")
+        if option == "1":
+            clear_terminal()
+            print("\nWelcome Back!\n")
+            from functions.learning_mod import learning
+            learning()
+        elif option == "2":
+            clear_terminal()
+            from functions.translator import translator
+            translator()
+        elif option == "3":
+            clear_terminal()
+            quiz()
+        else: 
+            print('''\nThat's not a valid menu option. Please try again
+            from the selection above.''')
