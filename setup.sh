@@ -1,13 +1,4 @@
 #!/bin/bash
-
-python3 --version
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-
-
-#! /bin/bash
 echo "Thank you for choosing Viper Learning." 
 sleep 1
 if ! [[ -x "$(command -v python3)" ]]
