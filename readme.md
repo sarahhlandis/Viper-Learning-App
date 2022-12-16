@@ -18,20 +18,20 @@ This terminal application was made in accordance with the PEP8 styleguide.
 
 
 ### Application Features
-1. Use of various user input throughout the program
+#### 1. Use of various user input throughout the program
 - The app will require user input at various point throughout the app both in terms of navigating thru the application as well as responding to application prompts. 
 - Upon opening the application, the user will be required to input which mode they wish to enter: Translation, Learning, or Quiz mode.
 - Based on this choice, the application will then enter the chosen mode.
 - The translation mode will simply allow the user to input their desired text, select which language they wish to translate to, and then translate accordingly.
 - At any given input point, the user can type \home or \exit to either return to the main Viper menu or exit the program completely.
 
-2. Learning Mode
+#### 2. Learning Mode
 - The learning mode will allow the user to learn specific words from their relevant course learning files (in CSV file format).
 - The user will specify which language they wish to study from (i.e. if they wish to study from english words, they will have to input the french translations and vice versa).
 - The user will have the opportunity to practice the words in a sort of flashcard style way, where a word will be displayed and the user will have to enter the translation. The user will be alotted 3 tries to correctly guess the word.
 - Upon exiting this mode, the application will output which words the user needs to work on in terms of displaying incorrectly guessed words, as well as words they guessed correctly.
 
-3. Quiz Mode
+#### 3. Quiz Mode
 - The Quiz mode can be accessed at any time from either of the other two modes.
 - Quiz mode offers the user the chance to practice the words they've learned with an added time component.
 - The user can specify how long they wish to play using a built-in timer (in seconds). This timer runs simultaneosly with the quiz word generator, using a method called threading.
@@ -44,9 +44,12 @@ To note:
 
 
 ### Implementation Plan
-- Feature 1: I plan to prioritize the user input functionality first and foremost, as this is integral to the application running smoothly. Feature 1 will also include the basic translation mode as well.
-- Feature 2: I plan to focus on the learning mode once the main "interface" is complete. Once I have created the logic for gathering file information and transferring it into a nested list, I can reuse this for the quiz mode.
-- Feature 3: The quiz mode will be implemented a step behind the learning mode as the logic required is similar to that of the learning mode. I also need to look into running a timer simulatenously to when the user "starts" the quiz. 
+#### - Feature 1: 
+ - I plan to prioritize the user input functionality first and foremost, as this is integral to the application running smoothly. Feature 1 will also include the basic translation mode as well.
+#### - Feature 2: 
+- I plan to focus on the learning mode once the main "interface" is complete. Once I have created the logic for gathering file information and transferring it into a nested list, I can reuse this for the quiz mode.
+#### - Feature 3: 
+- The quiz mode will be implemented a step behind the learning mode as the logic required is similar to that of the learning mode. I also need to look into running a timer simulatenously to when the user "starts" the quiz. 
 
 - If you wish to see a more detailed process of my implementation plan, please review the below images or check out my Trello board (link at top).
 
@@ -63,42 +66,42 @@ Changes along the way (as of Dec 15):
 ![Feature2](./docs/learning2.png)
 
 
-#### Project Management
+### Project Management
 - I chose to use Trello to manage this project. Please see below images of the implementation plan (with dates) I intend to follow in terms of building out the features of the application.
 
 ![ImplementationPlan](./docs/implementation_plan.png)
 
-Progress as of Sat Dec 10
-    ![ImplementationPlan-Update](./docs/implementation_update1.png)
+#### Progress as of Sat Dec 10
+![ImplementationPlan-Update](./docs/implementation_update1.png)
 
-Progress as of Tues Dec 13
-    ![ImplementationPlan-Update2](./docs/implementation_update2.png)
+#### Progress as of Tues Dec 13
+![ImplementationPlan-Update2](./docs/implementation_update2.png)
 
-Progress as of Thurs Dec 15
-    ![ImplementationPlan-Update3](./docs/implementation_update3.png)
+#### Progress as of Thurs Dec 15
+![ImplementationPlan-Update3](./docs/implementation_update3.png)
 
-Progress as of Friday Dec 16
-    ![ImplementationPlan-Update4](./docs/implementation_update4.png)
+#### Progress as of Friday Dec 16
+![ImplementationPlan-Update4](./docs/implementation_update4.png)
 
 
 ### Installation Guide and Help Documentation
 ### 1. Installation Guide
 #### 1. Git Clone
-        - Ensure you have Python installed on your computer. 
-        Run ```python3 --version``` to confirm. If you recieve a message back saying something along the lines of
-        ```python3: command not found```
-        - run ```python --version``` to be certain as you may have a different version. 
-        * Make sure your python version begins with a 3.
-        To download python, visit: [Python official website](https://www.python.org/downloads/)
-        - Once you're set up with Python3, open Terminal and cd into your desired location on your computer.
-        - Create a directory and initialize it to get ready for cloning a remote repository.
-        Run ```git init``` to do this.
-        - From within that directory, run 
-        ```git clone git@github.com:sarahhlandis/Terminal_Application.git```
-        - cd into the directory titled Terminal_Application-main
-        - To setup all required dependencies and activate the virtual environment, run 
-        ```bash setup.sh```
-        - Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
+- Ensure you have Python installed on your computer. 
+Run ```python3 --version``` to confirm. If you recieve a message back saying something along the lines of
+```python3: command not found```
+- run ```python --version``` to be certain as you may have a different version. 
+* Make sure your python version begins with a 3.
+To download python, visit: [Python official website](https://www.python.org/downloads/)
+- Once you're set up with Python3, open Terminal and cd into your desired location on your computer.
+- Create a directory and initialize it to get ready for cloning a remote repository.
+Run ```git init``` to do this.
+- From within that directory, run 
+```git clone git@github.com:sarahhlandis/Terminal_Application.git```
+- cd into the directory titled Terminal_Application-main
+- To setup all required dependencies and activate the virtual environment, run 
+```bash setup.sh```
+- Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
 
 #### 2. Download Zip from GitHub
 - Ensure you have Python installed on your computer. 
@@ -120,14 +123,15 @@ Progress as of Friday Dec 16
 
 ### 3. Help Documentation:
 - This app is meant to be used by anyone for their relevant foreign language learning.
-#### 1. Uploading your own files: 
+    #### Uploading your own files: 
 - To enable this app to suit your language requirements, please add your CSV files to the CSV folder:
     ```Terminal_Application-main/src/csv```
 This is where you are able to store your own language learning files in order to populate the personalized quiz and learning module within the application.
     - When adding your own CSV files, please ensure you have a header row, with two columns: English and the language of your choosing. Please be sure the first column is English and the second is the foreign language.
         - This will ensure that the application can read your files accurately as the code is built around this stylistic formatting.
     - Also note, you can create these files in excel and then export them as required into CSV format. ** The application is compatible with CSV files only.
-#### 2. Character sensitivity:
+
+#### Character sensitivity:
 - Being that Viper is a language learning application designed to help you learn new words, your responses are character-sensitive. This means that if you spell the word correctly, but neglect the proper accenting, the word will be marked wrong. (e.g. february = février, not fevrier)
 ** Please be sure you utilize appropriate accenting if your intended learning language includes special characters.
 - To apply special characters, you can:
@@ -136,12 +140,14 @@ This is where you are able to store your own language learning files in order to
     ** Please see the below relevant documentation for methods on how to type accented keys:
         - [Mac users](https://support.apple.com/en-au/guide/mac-help/mh27474/mac)
         - [Windows users](https://nerdschalk.com/how-to-type-accents-on-windows/)
-#### 3. Quiz Report (autogenerated file)
+
+    #### Quiz Report (autogenerated file)
 - A special feature of the Viper Learning Application is the autogenerated report the user receives upon completing a quiz. This report features some metrics calculated from the user's perfomance throughout the quiz. 
 - To view this autogenerated .txt file, please look in the root of the main file once you've finished your quiz (i.e. ```Terminal_Application-main/quizreport.txt```)
 - If you wish to keep this file, simply save it with whatever name you like.
 - * This file will be overwritten with new metrics upon each completed quiz.
-#### 4. Learning and Quiz Mode
+
+    #### Learning and Quiz Mode
 - This application's purpose is to help you learn and get familiar with new words.
 - Language is also highly repetitive, so you may find when you are studying, that the same word may be outputted more than once whether it be in quiz or learning mode.
 - This is supposed to happen, as it is randomly generated from your file, but don't worry - it is intended for you so that you gain more exposure and practice quick thinking, rather than only being exposed to a word just once over per session.
