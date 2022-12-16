@@ -10,7 +10,11 @@ Check out my gitHub repository here: [Github repo](https://github.com/sarahhland
 
 ### Style Guide:
 This terminal application was made in accordance with the PEP8 styleguide.
-It features 
+    - It features appropriate indentation to enhance code readability as well as blank lines to separate code blocks.
+    - All the files in this project include detailed comments, in order for developers to better understand what is going on. This also fosters a better environment for devs to make future modifications, refactoring, and/or add features.
+    - UTF-8 default coding
+    - Follows proper naming conventions (snake_case format) with semantic and easy-to-follow function/var naming
+
 
 ### Application Features
 1. Use of various user input throughout the program
@@ -28,9 +32,9 @@ It features
 3. Quiz Mode
 - The Quiz mode can be accessed at any time from either of the other two modes.
 - Quiz mode offers the user the chance to practice the words they've learned with an added time component.
-- The user can specify how long they wish to play using a built-in timer (in seconds).
-- This mode will randomly generate a word from the file that the user has chosen, and require them to correctly translate, with one guess per question
-- Upon finishing the quiz, the application will generate a quiz report file which the user can take a look at.
+- The user can specify how long they wish to play using a built-in timer (in seconds). This timer runs simultaneosly with the quiz word generator, using a method called threading.
+- This mode will randomly generate a word from the file that the user has chosen, and require them to correctly translate, with one guess per question.
+- Upon finishing the quiz, the application will generate a quiz report file which the user can take a look at and review metrics from their quiz session.
 
 Things to note: 
 - All sections will be able to be accessed internally from any of the other modes.
@@ -66,7 +70,10 @@ Progress as of Tues Dec 13
     ![ImplementationPlan-Update2](./docs/implementation_update2.png)
 
 Progress as of Thurs Dec 15
-    ![ImplementationPlan-Update2](./docs/implementation_update3.png)
+    ![ImplementationPlan-Update3](./docs/implementation_update3.png)
+
+Progress as of Friday Dec 16
+    ![ImplementationPlan-Update4](./docs/implementation_update4.png)
 
 
 ### Help Documentation and Installation Guide
@@ -75,9 +82,8 @@ Progress as of Thurs Dec 15
     2. Search your computer for Terminal.
     3. Once in Terminal, 
 2. Required Dependencies
-    - The required dependencies can be found in the requirements.txt folder. Please note, internet connection is required to use the translator mode.
-3. System Requirements
-4. Command Line Arguments
+    - The required dependencies can be found in the requirements.txt folder. Please note, an internet connection is required to use the translator mode. 
+
 
 
 

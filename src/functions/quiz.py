@@ -164,7 +164,7 @@ def quiz():
             print("\nLooks like that's not a valid time. Please try again.\n")
 
 
-    ready=handleUserInput_stringOnly("\nAre you ready to begin? \n")
+    ready=handleUserInput_stringOnly("\nAre you ready to begin? Type pass if you don't know the answer (or your score will be wrong)!\n")
 
     # determine user input to run correct func
     if ready.lower() == "yes":
