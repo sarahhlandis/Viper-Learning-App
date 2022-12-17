@@ -6,7 +6,7 @@
 
 ### [Project Management](https://trello.com/b/L4tvjr7Q/t1a3-terminal-application)
 
-### [Video Walkthru]()
+### [Video Walkthru](https://youtu.be/89G4YbyLYHI)
 
 ## Style Guide:
 This terminal application was made in accordance with the PEP8 styleguide.
