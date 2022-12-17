@@ -297,6 +297,8 @@ The code finishes by printing the words the got correct as well as incorrect, fo
 
 #### Sources Used:
 - CSV docs populated from [here](https://copylists.com/french/list-basic-french-words/#google_vignette)
+- Loom for Video Recording
+- Youtube for Video Publishing
 
 
 
