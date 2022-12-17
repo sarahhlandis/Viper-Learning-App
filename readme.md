@@ -187,40 +187,41 @@ The most integral part of this application is the thought process and required a
             # searches thru files and returns matching
             filepath = list(Path(target_dir).glob(f"**/{filename}.csv"))[0]
     ```
-- Next, it was required to pass the arguments to the next function called learning_mode(). I passed both filepath and practice_lang to learning_mode().
-- Here's where it starts to get tricky. Once the file was found which must be in CSV format (noted in help docs above), I then converted the contents to a list of lists (each row is its own list to ensure the language pairs remained together) so that I had the ability to index them. This list then gets passed to the next function along with a new variable called language_to_practice (which was obtained from practice_lang, since it was passed)
+- Next, it was required to pass the arguments to the next function called ```learning_mode()```. I passed both ```filepath``` and ```practice_lang``` to ```learning_mode()```.
+- Here's where it starts to get tricky. Once the file was found which must be in CSV format (noted in help docs above), I then converted the contents to a list of lists (each row is its own list to ensure the language pairs remained together) so that I had the ability to index them. This list then gets passed to the next function along with a new variable called ```language_to_practice``` (which was obtained from ```practice_lang```, since it was passed previously) (snippet below)
     ```python
         vocabulary = list(open_file) 
         word_check(vocabulary, language_to_practice)   
     ```
-- I wanted to code in that the learning session only lasted the length of the file, not more, not less so I created yet another new variable which stored the length of the list -1 (as lists start from 0) 
+- I wanted to code in that the learning session only lasted the length of the file, not more, not less so I created yet another new variable which stored the length of the list -1 (as lists start from 0)(snippet below)
     ```python
     list_len = len(vocabulary)-1
     ```
-- Okay, here is the part I was stuck on. I was playing in the program and needed to output the opposite language word pair of what the user chose (i.e. if they chose english, then the program needed to output the opposite lang pair). To do this, I created a variable lang_index and swapped the value, so that the program was sure to read from the appropriate language column. 
+- Okay, here is the part I was stuck on. I was playing in the program and needed to output the opposite language word pair of what the user chose (i.e. if they chose english, then the program needed to output the opposite lang pair). To do this, I created a variable lang_index and swapped the value, so that the program was sure to read from the appropriate language column. (snippet below)
     ```python
     if lang_index == 1:
             guessword = 0
         else: guessword = 1
     # statement switches the index to correspond with language of their answer, to determine if a match (correct)
     ```
-- The next step in the output process was to randomgen a word from the list, noting that it has to be in the language they chose. To do this, I had to create a variable called practice_word which calls a value relevant to language they chose.
+- The next step in the output process was to randomgen a word from the list, noting that it has to be in the language they chose. To do this, I had to create a variable called practice_word which calls a value relevant to language they chose. (snippet below)
     ```python
         practice_word = vocabulary[random_word][lang_index]
 
         # vocabulary[0][1] gives french value
         # vocabulary[0][0] gives english value
     ```
-I then used an f-string to ensure I was printing the correct value, always.
+I then used an f-string to ensure I was printing the correct value, always. (snippet below)
 ```python
     user_entry = (handleUserInput(f"What is the {language_to_practice} translation of {practice_word}"))
 ```
-- To check if their answer was a match, I needed to revert back to the variable guessword, where I switched the index. 
+- To check if their answer was a match, I needed to revert back to the variable guessword, where I switched the index. (snippet below)
     ```python
         if user_entry == (vocabulary[random_word][guessword]).lower():
                     print("Nice work! That's correct. \n")
     ```
-    This makes sense because now I'm checking the opposite value for the same index of the word that was output (so the random_word value must remain, it's just the other index that needed to flip to confirm the value). A bit confusing, I know!
+    This makes sense because now I'm checking the opposite value for the same index of the word that was output (so the ```random_word``` corresponding index must remain, it's just the other index that needed to flip to confirm the value). A bit confusing, I know!
+
 - There is also some code in the learning mode limiting the user to 3 guesses per word, using a simple for loop with a range(1-4) to ensure it is inclusive of their third guess. I also coded in to show remaining guesses, which stumped me at first but was resolved by incrementing down by 1 for each guess, with the associated variable starting at 3.
 - The rest of the logic in the learning mode is fairly simple, in terms of simply coding in for output messages once the user has finished the module.
 The code finishes by printing the words the got correct as well as incorrect, followed by an internal menu featuring navigation options.
@@ -229,7 +230,7 @@ The code finishes by printing the words the got correct as well as incorrect, fo
 - Quiz mode required similar logic to the learning mode, in that I needed to allow for checking opposite indexs to confirm if the user input value matched the actual value pair in the list they selected.
 - The thinking and logic is the same as in the learning mode in regards to matching a file, outputting randomly generated words, checking the answers against the correct index, etc.
 - The algorithmic logic for the quiz mode comes into play when speaking about the timer. I needed this timer to run simultaneously to when the user said they wanted to start the quiz. So naturally, first, I needed to make sure that starting point was obvious - I coded in to ask the user if they were ready or not ready. Once the program understands that the user says yes, the timer and the function to output words, begins.
-- To do this, I used a python built-in package called threading in which the sole purpose is to thread one or multiple functions through each other, which is exactly what I was looking for in this case. For this exact purpose, the quiz_timer variable needed to be global so the whole module could access it for it to work properly.
+- To do this, I used a python built-in package called threading in which the sole purpose is to thread one or multiple functions through each other, which is exactly what I was looking for in this case. For this exact purpose, the ```quiz_timer``` variable needed to be global so the whole module could access it for it to work properly.
     ```python
      while quiz_timer:
             mins, secs = divmod(quiz_timer, 60)
@@ -242,6 +243,31 @@ The code finishes by printing the words the got correct as well as incorrect, fo
                 break
     ```
 - So when quiz_timer reaches zero, I matched it with the other function doing something at the same time, so that effectively, the two end in unison. The quiz initially starts with a while loop statement ```while quiz_timer>0:``` run the quiz, and within that while loop, then also checks ```if quiz_timer==0: ```, output results.
+- There was a bug where if the user entered in 1s for the ```quiz_timer``` and then proceeded to not answer the question prompt, that the output was displaying the prompts for both if you had no wrong words and if you had no correct words. So I had to modify the code to:
+    ```python
+        # if the rounds played = # of correct, then they got them all right
+        if len(correct)==rounds: 
+            print ("You did not get any words wrong. It seems you've mastered it!!")
+        # otherwise they got some wrong
+        else:
+            print (f"\nCheck out your quiz report to view words you got wrong and more.")
+    ```
+    I tried to achieve this using mathmatical operators compared to integers (i.e. ```if len(incorrect)>0```) but this seemed to work best. I also had to hard-code the rounds number to be 1 instead of 0 in this situation to avoid a ZeroDivisionError.
+- Additionally there was one other issue that warranted some algorithmic thinking and it was how/where to implement in the code, a solution to if a user entered 0 as their desired timer. The TypeError was not arising in that input section, but rather when the quiz actually tried to pull the vocabulary list (I presume this is because there simply was no time to pull the list from their specified file). So to mitigate this issue, I rather placed a control flow conditional statement after requesting user input (within an already existent while loop). (snippet below)
+    ```python
+    # asks user for timer input
+    while True:
+        try:
+            quiz_timer=int(handleUserInput("\nHow much time would you like on the clock(in seconds)? \n"))
+            if quiz_timer<=0:
+                quiz_timer=int(handleUserInput("\nPlease try again. Timer must be set above 0. \n"))
+            timer_set=quiz_timer
+            break
+        except ValueError:
+            print("\nLooks like that's not a valid time. Please try again.\n")
+    ```
+    This handles the issue of previously accepting 0 as an answer without having to use a Try/Except as there was no actual error generated here.
+
 - In the program, upon finishing the quiz, I wanted the user to see a brief snapshot of how they performed so I created a way to display their overall score percentage. To do this, I needed to track the rounds, being careful not to count any with no input (think: if the timer runs out mid/no response, we don't want this counting as a round as the timer expired). I created a variable called rounds, initially set to 0, which incremented +1 per round, and -1 if no input (the program specifies to pass if you don't know, or your score will be affected).
 - To create the percentage output, I did the length of correct (which is a list populated each time the user guesses a word correctly), divided by rounds. This value was then multiplied by 100 and stored in a variable called percentage.
 - With the added difference of a timer, quiz mode also features an autogenerated quiz report txt file that the user can look upon. To populate this, I used metrics such as the amount of time they set to play, the number of rounds, how many incorrect/correct words, the avg time per round (rounds/timer), etc. To do this, I used a couple f-strings to achieve a suitable format within the txt file.
