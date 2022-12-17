@@ -66,21 +66,22 @@ def quiz():
                 elif percentage >= 90: 
                     print (f"You're a pro who knows their words! You scored {int(percentage)} percent.")
                 elif percentage >= 80:
-                    # print (f"Well done! - you got {len(correct)} out of {rounds} words correct!")
                     print (f"Well done! - you sccored {int(percentage)} percent.")
                 # print (correct)
-                elif percentage >=70:
-                    print (f'''Nice job - you sccored {int(percentage)} percent.
+                elif percentage >= 70:
+                    print (f'''Not bad - you sccored {int(percentage)} percent.
                     Looks like there's more work to do...''')
                 elif percentage < 70:
                     print(f'''Oh no.. you only scored {int(percentage)} percent. Let's go back
                     to studying...''')
 
-                # to print incorrect set of words
-                if len(incorrect)>0:
-                    print (f"\nCheck out your quiz report to view words you got wrong and more.")
-                else: 
+                # to print output based on # of incorrect words
+                # if the rounds played = # of correct, then they got them all right
+                if len(correct)==rounds: 
                     print ("You did not get any words wrong. It seems you've mastered it!!")
+                # otherwise they got some wrong
+                else:
+                    print (f"\nCheck out your quiz report to view words you got wrong and more.")
 
                 print('''\nIf you wish to view your quiz report, please look in the local 
                 folder of the Viper application.''')
@@ -157,10 +158,13 @@ def quiz():
     while True:
         try:
             quiz_timer=int(handleUserInput("\nHow much time would you like on the clock(in seconds)? \n"))
+            if quiz_timer<=0:
+                quiz_timer=int(handleUserInput("\nPlease try again. Timer must be set above 0. \n"))
             timer_set=quiz_timer
             break
         except ValueError:
             print("\nLooks like that's not a valid time. Please try again.\n")
+
 
     # confirms if user is ready to begin
     ready=handleUserInput_stringOnly("\nAre you ready to begin? Type pass if you don't know the answer (or your score will be wrong)!\n")
