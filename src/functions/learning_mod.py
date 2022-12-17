@@ -45,8 +45,7 @@ def learning():
 
         while counter < list_len:
             random_word = random.randint(1,
-                                        list_len)  # figure out how gen random int
-                    # without repeating one that has already occurred
+                                        list_len)
 
             # generates index of random practice word relative to lang chosen
             practice_word = vocabulary[random_word][lang_index]
@@ -54,25 +53,21 @@ def learning():
 
             # tries = 0
             x=3
-            for tries in range(1, 4):
+            for tries in range(1, 4):   # to iterate up to 3 tries (inclusive)
                 user_entry = (handleUserInput(
                     f"What is the {language_to_practice} translation of {practice_word}?\n"
                 )).lower()
-                # tries += 1 # to iterate up to 3 tries (inclusive)
                 x-=1 # to show tries left on output of each guess (when wrong)
                 if user_entry == (vocabulary[random_word][guessword]).lower():
                     print("Nice work! That's correct. \n")
-                    # correct.append(practice_word)
-                    correct.add(practice_word)
+                    correct.add(practice_word)   # adds correct word to correct set
                     break  # (break loop if correct)
-                    # return correct.append(practice_word)    # adds correct word to list
+                    
                 elif user_entry != (vocabulary[random_word][guessword]).lower():
                     print(
                         f"Incorrect. You have {x} tries remaining! \n"
                     )
-                    incorrect.add(practice_word)
-            # if counter==list_len:
-            #     break
+                    incorrect.add(practice_word)    # adds incorrect word to incorrect set
 
         # if user guessed any words right
         if len(correct)>0:
@@ -128,7 +123,7 @@ def learning():
             print("\nSorry that file doesn't seem to exist. Please enter a valid file name.\n")
 
     clear_terminal() # Clear terminal before starting
-    # determine user input to run correct func
+    # assess user input to run correct func
     if practice_lang.lower() == "english":
         print("\nGreat, let's begin!\n")
         learning_mode(filepath, practice_lang.lower())

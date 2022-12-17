@@ -12,8 +12,8 @@ from functions.user_input import *
 # Get languages from googletrans pkg dictionary
 languages=googletrans.LANGUAGES
 
-# Create a list from googletrans dict with values only
-language_list=list(languages.values())
+# # Create a list from googletrans dict with values only
+# language_list=list(languages.values())
 
 # Function for translator
 def translator():
@@ -44,7 +44,6 @@ def translator():
                 # Returns translation highlighted green
                 print (f"{Back.GREEN}{translation}")
                 translator_menu()
-                break
             except UnboundLocalError:
                 print ('''\nUnable to process. Please check that both languages are 
                 recognized and try again.\n''')
