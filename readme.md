@@ -6,6 +6,8 @@
 
 ### [Project Management](https://trello.com/b/L4tvjr7Q/t1a3-terminal-application)
 
+### [Video Walkthru]()
+
 ## Style Guide:
 This terminal application was made in accordance with the PEP8 styleguide.
 - It features appropriate indentation to enhance code readability as well as blank lines to separate code blocks.
