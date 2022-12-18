@@ -99,8 +99,7 @@ Run ```git init``` to do this.
 ```git clone git@github.com:sarahhlandis/Terminal_Application.git```
 - cd into the directory titled Terminal_Application-main
 - To setup all required dependencies and activate the virtual environment, run 
-```bash setup.sh```
-- Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
+```bash setup.sh```. Once this is complete, the Viper Learning Application should start automatically. Should you have any issues, you can also run ```bash runscript.sh``` however this should not be necessary as the ```setup.sh``` calls this command from within.
 
 #### 2. Download Zip from GitHub
 - Ensure you have Python installed on your computer. 
@@ -114,7 +113,7 @@ Run ```git init``` to do this.
 - Open Terminal and cd into the directory titled Terminal_Application-main
 - To setup all required dependencies and activate the virtual environment, run 
 ```bash setup.sh```
-- Once this is complete, you're welcome to run ```bash runscript.sh``` to enter into the Viper Learning Application
+- Once this is complete, the Viper Learning Application should start automatically. Should you have any issues, you can also run ```bash runscript.sh``` however this should not be necessary as the ```setup.sh``` calls this command from within.
 
 ## 2. Required Dependencies
 - The required dependencies can be found in the requirements.txt file, located at ```Terminal_Application-main/requirements.txt```. Please note, an internet connection is required to use the translator mode. 
