@@ -156,7 +156,7 @@ To note:
 
 ## Application Development Testing
 - Unit testing was conducted throughout the application's development on various features.
-- If you wish to view the outcome of some of the documented unit testing, please refer to ```Terminal_Application-main/docs/page1_testing``` and so forth - where you can view the outcomes of the process.
+- If you wish to view the outcome of some of the documented unit testing, please refer to ```Terminal_Application-main/docs/page1_testing.png``` and so forth where you can view the outcomes of the process.
 For your convenience, you may also view it's findings here:
 ![Testing](./docs/page1_testing.png)
 ![Testing (cont.)](./docs/page2_testing.png)
