@@ -29,7 +29,7 @@ To download python, visit: [Python official website](https://www.python.org/down
 Run ```git init``` to do this.
 - From within that directory, run 
 ```git clone git@github.com:sarahhlandis/Terminal_Application.git```
-- cd into the directory titled Terminal_Application-main
+- cd into the directory titled ```Viper-Learning-App```
 - To setup all required dependencies and activate the virtual environment, run 
 ```bash setup.sh```. Once this is complete, the Viper Learning Application should start automatically. Should you have any issues, you can also run ```bash runscript.sh``` however this should not be necessary as the ```setup.sh``` calls this command from within.
 
